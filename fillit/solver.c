@@ -6,14 +6,14 @@
 /*   By: lsmienk <lsmienk@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/05/13 11:47:30 by lsmienk        #+#    #+#                */
-/*   Updated: 2019/05/24 11:54:16 by scleerdi      ########   odam.nl         */
+/*   Updated: 2019/05/24 12:51:51 by scleerdi      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 #include <stdio.h>
 
-static void		print_solution(char **str, int s)
+static void			print_solution(char **str, int s)
 {
 	int y;
 	int x;
@@ -32,7 +32,7 @@ static void		print_solution(char **str, int s)
 	}
 }
 
-static char		**ft_2dstrnew(size_t size_y, size_t size_x)
+static char			**ft_2dstrnew(size_t size_y, size_t size_x)
 {
 	char	**graph;
 	char	*axis;
@@ -52,7 +52,7 @@ static char		**ft_2dstrnew(size_t size_y, size_t size_x)
 	return (graph);
 }
 
-static char		**ft_clean_map(char **map, int s)
+static char			**ft_clean_map(char **map, int s)
 {
 	int		x;
 	int		y;
@@ -94,7 +94,7 @@ static int			place_checked(char **map, t_tet *tet)
 	return (1);
 }
 
-static int		check_adjust(char **map, t_tet *tet, int size)
+static int			check_adjust(char **map, t_tet *tet, int size)
 {
 	t_point	i;
 	int		l;
@@ -124,7 +124,7 @@ static int		check_adjust(char **map, t_tet *tet, int size)
 	return (place_checked(map, tet));
 }
 
-void			solver(t_list *lst)
+void				solver(t_list *lst)
 {
 	int		size;
 	char	**map;

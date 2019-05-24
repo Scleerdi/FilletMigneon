@@ -6,7 +6,7 @@
 /*   By: lsmienk <lsmienk@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/04/29 09:55:29 by lsmienk        #+#    #+#                */
-/*   Updated: 2019/05/20 13:28:47 by scleerdi      ########   odam.nl         */
+/*   Updated: 2019/05/24 12:55:31 by scleerdi      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -124,7 +124,7 @@ static int		create_tet(char *input, t_tet *tet)
 ** If a function returns a -1 the input is not valid
 */
 
-int				validate(char *input, t_list **lst, int count)
+int				validate(char *input, t_list *lst, int count)
 {
 	int		res;
 	t_tet	*tet;
@@ -142,6 +142,6 @@ int				validate(char *input, t_list **lst, int count)
 	add->content_size = sizeof(tet);
 	add->content = tet;
 	add->next = NULL;
-	ft_lstaddend(lst, add);
+	ft_lstaddend(&lst, add);
 	return (res);
 }
